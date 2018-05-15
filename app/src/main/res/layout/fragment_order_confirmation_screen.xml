@@ -1,0 +1,151 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical"
+
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/add"
+        android:padding="5dp"
+        android:orientation="vertical"
+        android:background="@color/edit_text_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:text="@string/address"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+        <TextView
+
+            android:text="2"
+            android:id="@+id/tvAdd"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/add"
+        android:padding="5dp"
+        android:id="@+id/del"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:background="@color/edit_text_line"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+
+            android:text="@string/payment"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+        <TextView
+            android:text="@string/cash_on_delievery"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+
+
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:paddingRight="10dp"
+        android:layout_below="@id/del"
+        android:paddingLeft="10dp"
+        android:id="@+id/recycler_view"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scrollbars="vertical" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnConfirm"
+        android:background="@color/pink"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/confirm"
+            android:id="@+id/tvTotalAmount"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentLeft="true"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:text="@string/confirm"
+            android:textStyle="bold"
+            android:id="@+id/tvAmount"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="15sp" >
+        </TextView>
+
+    </RelativeLayout>
+</RelativeLayout>

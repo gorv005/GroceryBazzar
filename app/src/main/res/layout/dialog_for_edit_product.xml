@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="270dp"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    >
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tvProductName"
+        android:lines="2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:layout_marginRight="100dp"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:layout_alignParentLeft="true"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+         />
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:layout_width="100dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:gravity="right"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivCartSub"
+            android:src="@drawable/minus"
+            android:tint="@color/pink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:background="@color/edit_text_line"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:id="@+id/tvstock"
+            android:text="0"
+            android:gravity="center"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            />
+
+        <ImageView
+            android:tint="@color/pink"
+            android:id="@+id/ivCartAdd"
+            android:src="@drawable/card_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnDone"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dip"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_back1"
+        android:text="@string/done"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+</RelativeLayout>

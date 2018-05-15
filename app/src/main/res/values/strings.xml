@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">Grocery Bazaar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="email_mobile">Email</string>
+    <string name="email">Email</string>
+    <string name="internet_issue">Oops!! No network</string>
+    <string name="rs">\u20A8</string>
+    <string name="hint_password">Password</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="btn_forgot_password">Forgot password</string>
+    <string name="don_account">Don\'t have an Account? SignUp</string>
+    <string name="lastName">Last Name</string>
+    <string name="firstName">First Name</string>
+    <string name="secondary_mobile">Mobile Secondary</string>
+    <string name="primary_number">Mobile Primary</string>
+    <string name="dob">DOB</string>
+    <string name="gender">Gender</string>
+    <string name="signUp">Sign Up</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="submit">Submit</string>
+    <string name="forgot_text">That\'s easy to fix. Just tell us your email address and will send you a link so you can change your password.</string>
+    <string name="logout">Logout</string>
+    <string name="addressline1">Address Line 1(House No.)</string>
+    <string name="AddressLine2">Address Line 2 (Street, Locality)</string>
+    <string name="landmark">Landmark</string>
+    <string name="pincode">Pin Code</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="country">Country</string>
+    <string name="add">Add</string>
+    <string name="edit">Edit</string>
+    <string name="update">Update</string>
+    <string name="Addresses">Addresses</string>
+    <string name="no_address">No address created yet.\nPress + button to add a address.</string>
+    <string name="no_sub_cat">No product available</string>
+    <string name="quantity">Qty</string>
+    <string name="my_orders">My Orders</string>
+    <string name="my_account">My Account</string>
+    <string name="change_password">Change Password</string>
+    <string name="checkout">Checkout</string>
+    <string name="address">Address</string>
+    <string name="payment">Payment</string>
+    <string name="cash_on_delievery">Cash on Delivery</string>
+    <string name="confirm">Confirm</string>
+    <string name="done">Done</string>
+    <string name="product_limit_exceed">Product stock limit exceed</string>
+    <string name="thanku_msg">Congratulation..!!\nYour Order has been placed successfully and deliver to you shortly.\nThanks for shopping with us.</string>
+    <string name="continue_shop">Continue</string>
+    <string name="title_activity_change_password">Change Password</string>
+    <string name="title_activity_orders">My Orders</string>
+    <string name="title_activity_my_accounts">My Accounts</string>
+</resources>

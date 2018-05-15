@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/white"
+        android:gravity="top"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+
+                android:id="@+id/etAddressLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/addressline1"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+
+                android:id="@+id/etAddressLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/AddressLine2"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+
+                android:id="@+id/etLandmark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/landmark"
+                android:lines="1"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+
+                android:id="@+id/etPincode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/pincode"
+                android:lines="1"
+                android:inputType="number"
+                android:maxLength="6"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/city"
+                android:lines="1"
+                android:drawableRight="@drawable/drop"
+                android:maxLines="1"
+                android:paddingRight="15dp"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/state"
+                android:lines="1"
+                android:drawableRight="@drawable/drop"
+                android:paddingRight="15dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/etCountry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/country"
+                android:lines="1"
+                android:drawableRight="@drawable/drop"
+                android:paddingRight="15dp"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textColor="@color/input_color"
+                android:textColorHint="@color/edit_hint_color" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <Button
+            android:id="@+id/add_button"
+            style="?android:textAppearanceSmall"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/pink"
+            android:text="@string/edit"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+</ScrollView>

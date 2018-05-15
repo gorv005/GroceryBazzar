@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.app.grocerybazzar.view.ActivityMyAccount">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="344dp"
+        android:layout_height="495dp">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <EditText
+
+                        android:id="@+id/etfirstName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/firstName"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textColorHint="@color/edit_hint_color" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+
+                        android:id="@+id/etLastName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/lastName"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textColorHint="@color/edit_hint_color" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+
+                        android:id="@+id/etDOB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/drop"
+                        android:focusable="false"
+                        android:hint="@string/dob"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textColorHint="@color/edit_hint_color" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/etGender"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:drawableRight="@drawable/drop"
+                        android:focusable="false"
+                        android:hint="@string/gender"
+                        android:lines="1"
+                        android:maxLines="1"
+                        android:paddingRight="15dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textColorHint="@color/edit_hint_color" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Spinner
+                    android:id="@+id/spinner_gender"
+                    style="@style/SpinnerTheme_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:gravity="start"
+                    android:paddingLeft="40dp"
+                    android:visibility="invisible" />
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+
+                        android:id="@+id/etMobilePrimary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/primary_number"
+                        android:inputType="number"
+                        android:lines="1"
+                        android:maxLength="10"
+                        android:maxLines="1"
+                        android:singleLine="true"
+                        android:textColor="@color/input_color"
+                        android:textColorHint="@color/edit_hint_color" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="200dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorAccent"
+                    android:text="EDIT"
+                    android:textColor="@color/white" >
+                    <requestFocus></requestFocus>
+                    </Button>
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+
+</LinearLayout>

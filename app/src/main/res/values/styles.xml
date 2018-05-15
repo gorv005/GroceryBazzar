@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/pink</item>
+        <item name="colorPrimaryDark">@color/pink</item>
+        <item name="colorAccent">@color/pink</item>
+        <item name="colorControlNormal">@color/light_gray</item>
+        <item name="colorControlActivated">@color/pink</item>
+        <item name="colorControlHighlight">@color/pink</item>
+
+    </style>
+    <style name="AppTheme.NoActionBar">
+
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
+        <item name="windowActionBar">false</item>
+        <item name="elevation">0dp</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+
+
+    </style>
+    <style name="EditText.custom" parent="Widget.AppCompat.EditText">
+        <item name="colorAccent">@color/light_gray</item>
+        <item name="colorControlNormal">@color/light_gray</item>
+        <item name="colorControlActivated">@color/light_gray</item>
+    </style>
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"
+
+        >
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">true</item>
+        <item name="color">@color/colorPrimary</item>
+    </style>
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+</resources>

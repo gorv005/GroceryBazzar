@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.app.grocerybazzar">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".view.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.ActivityHomeWithCategory"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".view.ActivityContainer"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".view.ActivityChangePassword"
+            android:label="@string/title_activity_change_password"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".view.ActivityHomeWithCategory"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".view.ActivityOrders"
+            android:label="@string/title_activity_orders"
+            android:parentActivityName=".view.ActivityHomeWithCategory"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <activity
+            android:name=".view.ActivityMyAccount"
+            android:label="@string/title_activity_my_accounts"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".view.ActivityHomeWithCategory"
+            android:theme="@style/AppTheme.NoActionBar" />
+    </application>
+
+</manifest>
