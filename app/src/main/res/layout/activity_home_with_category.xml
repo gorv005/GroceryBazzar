@@ -23,7 +23,7 @@
 
 
         <RelativeLayout
-            android:background="@color/white"
+            android:background="@color/navigation_color"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             >
@@ -37,21 +37,24 @@
             <RelativeLayout
                 android:id="@+id/rlHeader"
                 android:layout_width="match_parent"
-                android:layout_height="170dp"
+                android:layout_height="150dp"
                 android:layout_below="@id/ivPadding"
-                android:background="@color/light_gray">
+                android:background="@color/navigation_color">
 
-                <de.hdodenhof.circleimageview.CircleImageView
-                    xmlns:app="http://schemas.android.com/apk/res-auto"
-                    android:id="@+id/profile_image"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                <TextView
+                    android:id="@+id/tvprofile_image"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/round_back_ovel"
                     android:layout_margin="20dp"
+                    android:textSize="24sp"
+                    android:text="AG"
+                    android:gravity="center"
+                    android:textColor="@color/white"
                     android:layout_alignParentLeft="true"
                     android:layout_centerVertical="true"
-                    android:src="@drawable/placeholder_man"
-                    app:civ_border_width="2dp"
-                    app:civ_border_color="@color/white"/>
+
+                  />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -59,7 +62,7 @@
                     android:orientation="vertical"
                     android:gravity="center_vertical"
                     android:layout_centerVertical="true"
-                    android:layout_toRightOf="@+id/profile_image">
+                    android:layout_toRightOf="@+id/tvprofile_image">
 
                     <TextView
                         android:id="@+id/tvName"
@@ -77,7 +80,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:maxLines="1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/edit_text_line"
                         android:text="dgkgkk"/>
 
                     <TextView
@@ -86,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:textSize="14sp"
                         android:maxLines="1"
-                        android:textColor="@color/black"
+                        android:textColor="@color/edit_text_line"
                         android:text="dgkgkk"/>
                 </LinearLayout>
             </RelativeLayout>
@@ -94,7 +97,6 @@
 
 
             <ListView
-                android:background="@color/white"
                 android:id="@+id/lvMenuItem"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"

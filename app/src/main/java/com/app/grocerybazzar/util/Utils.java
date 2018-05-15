@@ -72,7 +72,7 @@ public class Utils {
       //  sideMenuItems.add(new SideMenuItem(R.string.profile, R.drawable.user));
         //sideMenuItems.add(new SideMenuItem(R.string.update_profile, R.drawable.user));
          sideMenuItems.add(new SideMenuItem(R.string.Addresses, R.drawable.address));
-        sideMenuItems.add(new SideMenuItem(R.string.my_orders, R.drawable.cart));
+        sideMenuItems.add(new SideMenuItem(R.string.my_orders, R.drawable.my_orders));
         sideMenuItems.add(new SideMenuItem(R.string.my_account, R.drawable.account));
         sideMenuItems.add(new SideMenuItem(R.string.change_password, R.drawable.change_password));
         sideMenuItems.add(new SideMenuItem(R.string.logout, R.drawable.logout));

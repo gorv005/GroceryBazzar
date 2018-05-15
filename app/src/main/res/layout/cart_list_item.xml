@@ -39,8 +39,8 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
                 android:layout_toRightOf="@id/ll">
 
                 <TextView
@@ -48,12 +48,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentTop="true"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="40dp"
                     android:layout_marginTop="5dp"
                     android:maxLines="2"
+                    android:textStyle="bold"
                     android:layout_alignParentLeft="true"
-                    android:text="hh"
+                    android:text="hhasdakljfjakf kljfkjdafkkjkkdjgkjdgjkjklgdjklgdjkgd"
                     android:textColor="@color/black"
                     android:textSize="12sp" />
 
@@ -70,28 +71,45 @@
                     android:textColor="@color/black"
                     android:textSize="12sp" />
             </RelativeLayout>
-
             <RelativeLayout
                 android:layout_toRightOf="@id/ll"
+                android:layout_centerVertical="true"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true">
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="3dp"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvWeight"
+                    android:text="kgj"
+                    android:layout_marginTop="15dp"
+                    android:maxLines="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_marginTop="15dp"
+                android:layout_alignParentBottom="true"
+                android:layout_toRightOf="@id/ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
 
                 <TextView
                     android:id="@+id/tvPrice"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentBottom="true"
-                    android:lines="2"
-                    android:layout_marginLeft="10dp"
+                    android:maxLines="2"
+                    android:layout_marginLeft="3dp"
                     android:gravity="center_vertical"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="5dp"
                     android:text="mn"
                     android:layout_alignParentLeft="true"
-                    android:textColor="@color/black"
+                    android:textColor="@color/light_pink"
                     android:textSize="12sp" />
 
                 <LinearLayout

@@ -43,14 +43,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
                 <TextView
-                    android:layout_marginRight="10dp"
-                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="3dp"
                     android:layout_alignParentTop="true"
                     android:textSize="12sp"
                     android:textColor="@color/black"
                     android:id="@+id/tvsub_cat_name"
-                    android:text="kgj"
-
+                    android:text="kgja"
+                    android:maxLines="2"
+                    android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"/>
@@ -72,17 +73,37 @@
 
             <RelativeLayout
                 android:layout_toRightOf="@id/ll"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="40dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_alignParentTop="true"
+                    android:textSize="10sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvWeight"
+                    android:text="kgj"
+
+                    android:maxLines="2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_toRightOf="@id/ll"
                 android:layout_alignParentBottom="true"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
             <TextView
-                android:layout_marginRight="10dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="3dp"
                 android:layout_centerVertical="true"
                 android:textSize="12sp"
+                android:maxLines="1"
+                android:layout_marginEnd="90dp"
                 android:layout_alignParentBottom="true"
-                android:textColor="@color/black"
-                android:text="kgj"
+                android:textColor="@color/light_pink"
+                android:text="kgjad"
                 android:id="@+id/tvPrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -98,7 +119,7 @@
                     android:layout_height="wrap_content">
                     <ImageView
                         android:id="@+id/ivCartSub"
-                        android:src="@drawable/minus"
+                        android:src="@drawable/minus2"
                         android:tint="@color/pink"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -119,7 +140,7 @@
                     <ImageView
                         android:tint="@color/pink"
                         android:id="@+id/ivCartAdd"
-                        android:src="@drawable/card_add"
+                        android:src="@drawable/cartadd2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         />

@@ -33,6 +33,7 @@ public class AdapterCartList extends RecyclerView
             .OnClickListener {
         TextView tvSubCatname;
         TextView tvSubPrice;
+        TextView tvWeight;
         TextView tvQuanitityNo;
 
         ImageView imgSubCat,imgDeleteToCart,imgEditProduct;
@@ -42,7 +43,9 @@ public class AdapterCartList extends RecyclerView
             super(itemView);
             tvSubCatname = (TextView) itemView.findViewById(R.id.tvsub_cat_name);
             tvSubPrice = (TextView) itemView.findViewById(R.id.tvPrice);
+            tvWeight = (TextView) itemView.findViewById(R.id.tvWeight);
             tvQuanitityNo = (TextView) itemView.findViewById(R.id.tvQuanitityNo);
+
             imgEditProduct = (ImageView) itemView.findViewById(R.id.ivCartEdit);
             imgDeleteToCart = (ImageView) itemView.findViewById(R.id.ivdeleteCart);
 
@@ -81,6 +84,8 @@ public class AdapterCartList extends RecyclerView
         holder.tvSubCatname.setText(mDataset.get(position).getProductName());
         holder.tvSubPrice.setText(context.getString(R.string.rs)+" " +mDataset.get(position).getProductPrice());
         holder.tvQuanitityNo.setText(mDataset.get(position).getQuantity());
+        holder.tvWeight.setText(mDataset.get(position).getWeight());
+
         imageLoader.DisplayImage(mDataset.get(position).getProductImage(),holder.imgSubCat);
             holder.imgDeleteToCart.setOnClickListener(new View.OnClickListener() {
                 @Override

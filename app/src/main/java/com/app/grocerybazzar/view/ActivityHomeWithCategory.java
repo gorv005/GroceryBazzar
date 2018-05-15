@@ -62,7 +62,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
     GridView gridView;
     ImageView ibCart;
     CartList cartList;
-    TextView tvCartQuantity,tvName,tvContact,tvEmail;
+    TextView tvCartQuantity,tvName,tvContact,tvEmail,tvprofile_image;
 
     AdapterGridCategory adapterGridCategory;
     CategoryInfo categoryInfo = new CategoryInfo();
@@ -86,6 +86,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         tvName=(TextView) findViewById(R.id.tvName);
         tvContact=(TextView) findViewById(R.id.tvContact);
         tvEmail=(TextView) findViewById(R.id.tvMail);
+        tvprofile_image=(TextView) findViewById(R.id.tvprofile_image);
 
         ibCart.setOnClickListener(mCartClickListner);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -162,7 +163,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         tvEmail.setText(user.getEmail());
         tvContact.setText(user.getMobilePrimary());
         tvName.setText(user.getFirstName()+" "+user.getLastName());
-
+    //    tvprofile_image.setText(user.getFirstName().charAt(0)+user.getLastName().charAt(0));
 
      getcategoryList();
 

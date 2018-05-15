@@ -32,7 +32,7 @@
         android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/ivCartSub"
-            android:src="@drawable/minus"
+            android:src="@drawable/minus2"
             android:tint="@color/pink"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -53,7 +53,7 @@
         <ImageView
             android:tint="@color/pink"
             android:id="@+id/ivCartAdd"
-            android:src="@drawable/card_add"
+            android:src="@drawable/cartadd2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             />

@@ -8,6 +8,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingStart="20dp"
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:paddingBottom="15dp"
@@ -17,6 +18,7 @@
             android:id="@+id/ivIcon"
             android:src="@drawable/cart"
             android:layout_width="30dp"
+            android:tint="@color/pink"
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp" />

@@ -46,6 +46,7 @@ public class AdapterProductInfo extends RecyclerView
         TextView tvSubCatname;
         TextView tvSubPrice;
         TextView tvSubStock;
+        TextView tvWeight;
 
         ImageView imgSubCat,imgAddToCart,imgMinusProduct,imgAddProduct;
 
@@ -54,6 +55,8 @@ public class AdapterProductInfo extends RecyclerView
             super(itemView);
             tvSubCatname = (TextView) itemView.findViewById(R.id.tvsub_cat_name);
             tvSubPrice = (TextView) itemView.findViewById(R.id.tvPrice);
+            tvWeight = (TextView) itemView.findViewById(R.id.tvWeight);
+
             tvSubStock = (TextView) itemView.findViewById(R.id.tvstock);
             imgMinusProduct = (ImageView) itemView.findViewById(R.id.ivCartSub);
             imgAddProduct = (ImageView) itemView.findViewById(R.id.ivCartAdd);
@@ -99,6 +102,7 @@ public class AdapterProductInfo extends RecyclerView
     public void onBindViewHolder(final DataObjectHolder holder, final int position) {
         holder.tvSubCatname.setText(mDataset.get(position).getProductName());
         holder.tvSubPrice.setText(context.getString(R.string.rs)+" " +mDataset.get(position).getProductPrice());
+        holder.tvWeight.setText(mDataset.get(position).getWeight());
         AddToCartInfo addToCartInfo=new AddToCartInfo();
         addToCartInfo.setProductId(mDataset.get(position).getProductId());
         addToCartInfo.setQuantity(0);

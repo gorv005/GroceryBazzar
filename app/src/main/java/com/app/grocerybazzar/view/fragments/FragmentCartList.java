@@ -139,7 +139,7 @@ public class FragmentCartList extends Fragment implements CompleteListener {
                         ActivityContainer.tvTitle.setText("Cart ("+cartList.getCart().size()+" items)");
                         double total=0;
                         for (int i=0;i<cartList.getCart().size();i++){
-                           total =total+Double.parseDouble(cartList.getCart().get(i).getProductPrice());
+                           total =total+(Double.parseDouble(cartList.getCart().get(i).getProductPrice()) * Double.parseDouble(cartList.getCart().get(i).getQuantity()));
                         }
                         tvAmount.setText(getString(R.string.rs)+" " +total);
 

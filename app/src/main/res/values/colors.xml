@@ -11,5 +11,8 @@
     <color name="black">#000000</color>
     <color name="gray">#515151</color>
     <color name="light_gray">#D1D1D1</color>
+    <color name="light_pink">#E785C3</color>
+
+    <color name="navigation_color">#FFEFFF</color>
 
 </resources>

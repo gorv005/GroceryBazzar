@@ -52,4 +52,6 @@
     <string name="title_activity_change_password">Change Password</string>
     <string name="title_activity_orders">My Orders</string>
     <string name="title_activity_my_accounts">My Accounts</string>
+    <string name="register_email_id">Register Email ID</string>
+    <string name="categories_handpicked_for_you">Categories handpicked for you</string>
 </resources>
