@@ -102,6 +102,7 @@ public class AdapterProductInfo extends RecyclerView
         AddToCartInfo addToCartInfo=new AddToCartInfo();
         addToCartInfo.setProductId(mDataset.get(position).getProductId());
         addToCartInfo.setQuantity(0);
+        addToCartInfo.setProductVariantId(mDataset.get(position).getVariant_id());
         addToCartInfo.setUserId(SharedPreference.getInstance(context).getString(C.USER_ID));
         if(carts!=null &&carts.size()>0){
             for(int i=0;i<carts.size();i++){

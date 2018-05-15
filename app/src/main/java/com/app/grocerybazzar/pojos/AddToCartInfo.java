@@ -19,6 +19,9 @@ public class AddToCartInfo implements Serializable {
     @SerializedName("quantity")
     @Expose
     private long quantity;
+    @SerializedName("product_variant_id")
+    @Expose
+    private String productVariantId;
     public String getUserId() {
         return userId;
     }
@@ -43,5 +46,11 @@ public class AddToCartInfo implements Serializable {
         this.quantity = quantity;
     }
 
+    public String getProductVariantId() {
+        return productVariantId;
+    }
 
+    public void setProductVariantId(String productVariantId) {
+        this.productVariantId = productVariantId;
+    }
 }

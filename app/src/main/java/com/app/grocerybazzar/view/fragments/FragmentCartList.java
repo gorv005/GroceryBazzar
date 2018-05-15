@@ -117,6 +117,8 @@ public class FragmentCartList extends Fragment implements CompleteListener {
         mAction=C.update_cart;
         hashMap.put(C.USER_ID, SharedPreference.getInstance(getActivity()).getString(C.USER_ID));
         hashMap.put(C.PRODUCT_CART_ID,cart.getProductCartId());
+        hashMap.put(C.product_variant_id,cart.getProduct_variant_id());
+
         hashMap.put(C.quantity, cart.getQuantity());
 
         serviceConnection.sendToServer(C.BASE_URL_PRODUCT,C.update_cart,hashMap,C.MSG,FragmentCartList.this);
@@ -135,9 +137,9 @@ public class FragmentCartList extends Fragment implements CompleteListener {
                         adapterCartList = new AdapterCartList(cartList.getCart(), getActivity());
                         recyclerView.setAdapter(adapterCartList);
                         ActivityContainer.tvTitle.setText("Cart ("+cartList.getCart().size()+" items)");
-                        long total=0;
+                        double total=0;
                         for (int i=0;i<cartList.getCart().size();i++){
-                           total =total+Long.parseLong(cartList.getCart().get(i).getProductPrice());
+                           total =total+Double.parseDouble(cartList.getCart().get(i).getProductPrice());
                         }
                         tvAmount.setText(getString(R.string.rs)+" " +total);
 

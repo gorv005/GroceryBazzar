@@ -116,6 +116,8 @@ public class FragmentProductInfo extends Fragment implements CompleteListener {
         HashMap<String, String> hashMap = new HashMap<>();
         hashMap.put(C.USER_ID, addToCartInfo.getUserId());
         hashMap.put(C.product_id, addToCartInfo.getProductId());
+        hashMap.put(C.product_variant_id, addToCartInfo.getProductVariantId());
+
         hashMap.put(C.quantity, "" + addToCartInfo.getQuantity());
         mAction = C.add_to_cart;
         serviceConnection.sendToServer(C.BASE_URL_PRODUCT, C.add_to_cart, hashMap, C.MSG, FragmentProductInfo.this);

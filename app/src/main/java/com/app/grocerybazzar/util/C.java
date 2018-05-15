@@ -93,4 +93,5 @@ public class C {
     public static final String USER_ACCOUNT = "updateprofile ";
     public static final String USER_ORDERS = "order/userorders";
 
+    public static String product_variant_id="product_variant_id";
 }
