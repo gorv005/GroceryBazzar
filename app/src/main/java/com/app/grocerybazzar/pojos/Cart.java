@@ -16,10 +16,13 @@ public class Cart implements Serializable {
     @SerializedName("product_id")
     @Expose
     private String productId;
+    @SerializedName("product_variant_id")
+    @Expose
+    private String product_variant_id;
     @SerializedName("product_name")
     @Expose
     private String productName;
-    @SerializedName("product_price")
+    @SerializedName("price")
     @Expose
     private String productPrice;
     @SerializedName("product_image")
@@ -31,6 +34,9 @@ public class Cart implements Serializable {
     @SerializedName("quantity")
     @Expose
     private String quantity;
+    @SerializedName("weight")
+    @Expose
+    private String weight;
     @SerializedName("created_at")
     @Expose
     private String createdAt;
@@ -97,5 +103,21 @@ public class Cart implements Serializable {
 
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getProduct_variant_id() {
+        return product_variant_id;
+    }
+
+    public void setProduct_variant_id(String product_variant_id) {
+        this.product_variant_id = product_variant_id;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 }

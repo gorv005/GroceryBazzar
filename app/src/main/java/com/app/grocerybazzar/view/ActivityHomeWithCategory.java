@@ -163,7 +163,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         tvContact.setText(user.getMobilePrimary());
         tvName.setText(user.getFirstName()+" "+user.getLastName());
 
-        getcategoryList();
+
      getcategoryList();
 
     }

@@ -67,17 +67,23 @@ public class ImageLoader {
     }
     public void DisplayImage(String url, ImageView imageView) {
 
-        URI uri=null;
-        try {
-            uri = new URI(url.replace(" ", "%20"));
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+        if(url!=null) {
+            URI uri = null;
+            try {
+                uri = new URI(url.replace(" ", "%20"));
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+            url = uri.toString();
+            imageViews.put(imageView, url);
+            Bitmap bitmap = memoryCache.get(url);
+            if (bitmap != null)
+                imageView.setImageBitmap(bitmap);
+            else {
+                queuePhoto(url, imageView);
+                imageView.setImageResource(stub_id);
+            }
         }
-        url=uri.toString();
-        imageViews.put(imageView, url);
-        Bitmap bitmap = memoryCache.get(url);
-        if (bitmap != null)
-            imageView.setImageBitmap(bitmap);
         else {
             queuePhoto(url, imageView);
             imageView.setImageResource(stub_id);

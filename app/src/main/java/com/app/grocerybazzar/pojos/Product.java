@@ -19,6 +19,9 @@ public class Product implements Serializable{
     @SerializedName("subcat_id")
     @Expose
     private String subcatId;
+    @SerializedName("variant_id")
+    @Expose
+    private String variant_id;
     @SerializedName("product_name")
     @Expose
     private String productName;
@@ -34,18 +37,24 @@ public class Product implements Serializable{
     @SerializedName("product_long_desc")
     @Expose
     private String productLongDesc;
-    @SerializedName("product_price")
+    @SerializedName("price")
     @Expose
     private String productPrice;
     @SerializedName("brand_name")
     @Expose
     private String brandName;
+    @SerializedName("offer_code")
+    @Expose
+    private String offerCode;
     @SerializedName("stock")
     @Expose
     private String stock;
     @SerializedName("publish_time")
     @Expose
     private String publishTime;
+    @SerializedName("weight")
+    @Expose
+    private String weight;
     private boolean addedToCart;
 
 
@@ -190,5 +199,29 @@ public class Product implements Serializable{
 
     public boolean isAddedToCart() {
         return addedToCart;
+    }
+
+    public String getVariant_id() {
+        return variant_id;
+    }
+
+    public void setVariant_id(String variant_id) {
+        this.variant_id = variant_id;
+    }
+
+    public String getOfferCode() {
+        return offerCode;
+    }
+
+    public void setOfferCode(String offerCode) {
+        this.offerCode = offerCode;
+    }
+
+    public String getWeight() {
+        return weight;
+    }
+
+    public void setWeight(String weight) {
+        this.weight = weight;
     }
 }
