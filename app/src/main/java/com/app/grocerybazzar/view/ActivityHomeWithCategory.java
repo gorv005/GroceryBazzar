@@ -32,6 +32,7 @@ import com.app.grocerybazzar.adapter.ViewPagerAdapter;
 import com.app.grocerybazzar.pojo.SectionDataModel;
 import com.app.grocerybazzar.pojo.SingleItemModel;
 import com.app.grocerybazzar.pojos.CartList;
+import com.app.grocerybazzar.pojos.Category;
 import com.app.grocerybazzar.pojos.CategoryInfo;
 import com.app.grocerybazzar.pojos.User;
 import com.app.grocerybazzar.util.C;
@@ -56,7 +57,10 @@ public class ActivityHomeWithCategory extends AppCompatActivity
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
-    private static final Integer[] IMAGES= {R.drawable.abc,R.drawable.abc,R.drawable.abc,R.drawable.abc};
+    private static final Integer[] IMAGES= {R.drawable.clinic_plus,R.drawable.fair_nd_lovely};
+    private static final Integer[] IMAGES_BRAND= {R.drawable.cocacola,R.drawable.dabur,R.drawable.nestle,
+            R.drawable.pepsico,R.drawable.pg,R.drawable.pitanjali,R.drawable.tea,R.drawable.unilever,R.drawable.water};
+
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
     ArrayList<SectionDataModel> allSampleData;
     GridView gridView;
@@ -146,7 +150,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         });
 
         init();
-     /*   allSampleData = new ArrayList<SectionDataModel>();
+    /*    allSampleData = new ArrayList<SectionDataModel>();
         createDummyData();
 
 
@@ -163,7 +167,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         tvEmail.setText(user.getEmail());
         tvContact.setText(user.getMobilePrimary());
         tvName.setText(user.getFirstName()+" "+user.getLastName());
-    //    tvprofile_image.setText(user.getFirstName().charAt(0)+user.getLastName().charAt(0));
+       tvprofile_image.setText(String.valueOf(user.getFirstName().charAt(0)).toUpperCase()+String.valueOf(user.getLastName().charAt(0)).toUpperCase());
 
      getcategoryList();
 
@@ -350,7 +354,15 @@ public class ActivityHomeWithCategory extends AppCompatActivity
                 adapterGridCategory = new AdapterGridCategory(ActivityHomeWithCategory.this, R.layout.grid_item_view, categoryInfo.getCategories());
                 gridView.setAdapter(adapterGridCategory);
                 if (categoryInfo.getStatus().equals(C.SUCSESS)) {
-                    adapterGridCategory = new AdapterGridCategory(ActivityHomeWithCategory.this, R.layout.grid_item_view, categoryInfo.getCategories());
+                    ArrayList<Category> categories=new ArrayList<>();
+                    for(int i=0;i<IMAGES_BRAND.length;i++){
+                        Category category=new Category();
+                        category.setCategoryDrawable(IMAGES_BRAND[i]);
+                        categories.add(category);
+                    }
+                 //   adapterGridCategory = new AdapterGridCategory(ActivityHomeWithCategory.this, R.layout.grid_item_view, categoryInfo.getCategories());
+                    adapterGridCategory = new AdapterGridCategory(ActivityHomeWithCategory.this, R.layout.grid_item_view, categories);
+
                     gridView.setAdapter(adapterGridCategory);
                     //  adapterGridCategory.notifyDataSetChanged();
                 } else {

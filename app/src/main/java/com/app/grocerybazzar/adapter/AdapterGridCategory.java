@@ -57,8 +57,8 @@ public class AdapterGridCategory extends ArrayAdapter<Category> {
         }
 
         Category item = data.get(position);
-        holder.txtTitle.setText(item.getName());
-        imageLoader.DisplayImage(item.getCategoryIcon(),holder.imageItem);
+        //holder.txtTitle.setText(item.getName());
+        imageLoader.DisplayImage(null,holder.imageItem,item.getCategoryDrawable());
         return row;
 
     }

@@ -50,18 +50,24 @@ public class ImageLoader {
 
         URI uri=null;
         stub_id=id;
-        try {
-            uri = new URI(url.replace(" ", "%20"));
-        } catch (URISyntaxException e) {
-            e.printStackTrace();
+        if(url!=null) {
+            try {
+                uri = new URI(url.replace(" ", "%20"));
+            } catch (URISyntaxException e) {
+                e.printStackTrace();
+            }
+            url = uri.toString();
+            imageViews.put(imageView, url);
+            Bitmap bitmap = memoryCache.get(url);
+            if (bitmap != null)
+                imageView.setImageBitmap(bitmap);
+            else {
+                queuePhoto(url, imageView);
+                imageView.setImageResource(stub_id);
+            }
         }
-        url=uri.toString();
-        imageViews.put(imageView, url);
-        Bitmap bitmap = memoryCache.get(url);
-        if (bitmap != null)
-            imageView.setImageBitmap(bitmap);
         else {
-            queuePhoto(url, imageView);
+           // queuePhoto(url, imageView);
             imageView.setImageResource(stub_id);
         }
     }

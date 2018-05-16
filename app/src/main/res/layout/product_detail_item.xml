@@ -19,13 +19,14 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent">
 
-            <LinearLayout
+            <RelativeLayout
                 android:id="@+id/ll"
                 android:layout_centerVertical="true"
                 android:orientation="vertical"
                 android:layout_width="100dp"
                 android:layout_height="100dp">
                 <ImageView
+                    android:layout_centerInParent="true"
                     android:id="@+id/img_cat"
                     android:adjustViewBounds="true"
                     android:scaleType="centerInside"
@@ -36,7 +37,7 @@
                 </ImageView>
 
 
-            </LinearLayout>
+            </RelativeLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"

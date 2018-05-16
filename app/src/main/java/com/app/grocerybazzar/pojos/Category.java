@@ -21,6 +21,9 @@ public class Category implements Serializable {
     @SerializedName("category_icon")
     @Expose
     private String categoryIcon;
+    @SerializedName("category_drawable")
+    @Expose
+    private Integer categoryDrawable;
     @SerializedName("subcategories")
     @Expose
     private List<Subcategory> subcategories = null;
@@ -77,5 +80,13 @@ public class Category implements Serializable {
 
     public void setSubcategories(List<Subcategory> subcategories) {
         this.subcategories = subcategories;
+    }
+
+    public Integer getCategoryDrawable() {
+        return categoryDrawable;
+    }
+
+    public void setCategoryDrawable(Integer categoryDrawable) {
+        this.categoryDrawable = categoryDrawable;
     }
 }

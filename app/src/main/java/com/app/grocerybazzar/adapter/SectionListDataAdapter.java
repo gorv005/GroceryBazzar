@@ -43,8 +43,8 @@ public class SectionListDataAdapter extends RecyclerView.Adapter<SectionListData
         SingleItemModel singleItem = itemsList.get(i);
 
         holder.tvTitle.setText("ggfg ghhgh ghghg hjhjhhjhjjhhjjjj jhjhhjhjhj hgg hjhjggj jhgjgj jhjhh hhjjj");
-        imageLoader.DisplayImage("http://www.trendingbasket.com/videoapp/thumbs/Virat_six.jpg",holder.itemImage);
-
+       // imageLoader.DisplayImage("http://www.trendingbasket.com/videoapp/thumbs/Virat_six.jpg",holder.itemImage);
+        holder.itemImage.setImageResource(R.drawable.clinic_plus);
        /* Glide.with(mContext)
                 .load(feedItem.getImageURL())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
