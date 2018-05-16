@@ -33,6 +33,8 @@ public class AdapterOrderConfirmation extends RecyclerView
         TextView tvSubCatname;
         TextView tvSubPrice;
         TextView tvQuanitityNo;
+        TextView tvWeight;
+
         ImageView imgProduct;
 
 
@@ -41,6 +43,8 @@ public class AdapterOrderConfirmation extends RecyclerView
             tvSubCatname = (TextView) itemView.findViewById(R.id.tvsub_cat_name);
             tvSubPrice = (TextView) itemView.findViewById(R.id.tvPrice);
             tvQuanitityNo = (TextView) itemView.findViewById(R.id.tvQuanitityNo);
+            tvWeight = (TextView) itemView.findViewById(R.id.tvWeight);
+
             imgProduct = (ImageView) itemView.findViewById(R.id.img_cat);
 
             itemView.setOnClickListener(this);
@@ -77,7 +81,7 @@ public class AdapterOrderConfirmation extends RecyclerView
         holder.tvSubCatname.setText(mDataset.get(position).getProductName());
         holder.tvSubPrice.setText(context.getString(R.string.rs)+" " +mDataset.get(position).getProductPrice());
         holder.tvQuanitityNo.setText(mDataset.get(position).getQuantity());
-
+        holder.tvWeight.setText(mDataset.get(position).getWeight());
         imageLoader.DisplayImage(mDataset.get(position).getProductImage(),holder.imgProduct);
 
 

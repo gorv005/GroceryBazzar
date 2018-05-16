@@ -44,7 +44,7 @@ public class ImageLoader {
     }
 
 
-    int stub_id = R.mipmap.ic_launcher;
+    int stub_id = R.drawable.logo;
 
     public void DisplayImage(String url, ImageView imageView, int id) {
 

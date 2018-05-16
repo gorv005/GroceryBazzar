@@ -7,6 +7,9 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 
 import com.app.grocerybazzar.R;
 import com.app.grocerybazzar.adapter.AdapterOrdersList;
@@ -27,7 +30,7 @@ public class ActivityOrders extends AppCompatActivity implements CompleteListene
     private Utils util;
     private Context mContext;
     private AdapterOrdersList adapterOrdersList;
-
+    TextView noOrders;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class ActivityOrders extends AppCompatActivity implements CompleteListene
         setContentView(R.layout.activity_orders);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
+        noOrders=(TextView)findViewById(R.id.tvNoOrders);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         util = new Utils();
@@ -62,15 +65,26 @@ public class ActivityOrders extends AppCompatActivity implements CompleteListene
     @Override
     public void done(String response) {
 
+        Log.e("DEBUG","Response="+response);
+        try {
         Gson gson = new Gson();
         OrdersResponse ordersResponse = gson.fromJson(response.toString(), OrdersResponse.class);
-        adapterOrdersList = new AdapterOrdersList(ordersResponse);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(adapterOrdersList);
+        if(ordersResponse.getOrder().size()>0) {
+            noOrders.setVisibility(View.GONE);
+            adapterOrdersList = new AdapterOrdersList(ordersResponse);
+            RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+            recyclerView.setLayoutManager(mLayoutManager);
+            recyclerView.setItemAnimator(new DefaultItemAnimator());
+            recyclerView.setAdapter(adapterOrdersList);
+        }
+        else {
+            noOrders.setVisibility(View.VISIBLE);
+        }
         // Toast.makeText(mContext, response, Toast.LENGTH_LONG).show();
-
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @Override

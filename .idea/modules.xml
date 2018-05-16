@@ -5,9 +5,7 @@
       <module fileurl="file://E:\Freelancing\GroceryBazzarFinal\GroceryBazzar.iml" filepath="E:\Freelancing\GroceryBazzarFinal\GroceryBazzar.iml" />
       <module fileurl="file://$PROJECT_DIR$/GroceryBazzarFinal.iml" filepath="$PROJECT_DIR$/GroceryBazzarFinal.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://E:\Freelancing\GroceryBazzarFinal\app\app.iml" filepath="E:\Freelancing\GroceryBazzarFinal\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://E:\Freelancing\GroceryBazzarFinal\library\library.iml" filepath="E:\Freelancing\GroceryBazzarFinal\library\library.iml" />
     </modules>
   </component>
 </project>

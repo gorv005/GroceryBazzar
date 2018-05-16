@@ -98,11 +98,12 @@ public class FragmentOrderConfirmationScreen extends Fragment implements Complet
         recyclerView.setLayoutManager(mLayoutManager);
         adapterCartList = new AdapterOrderConfirmation(cartList.getCart(), getActivity());
         recyclerView.setAdapter(adapterCartList);
-        long amount=0;
-        for(int i=0;i<cartList.getCart().size();i++){
-            amount=amount+Long.parseLong(cartList.getCart().get(i).getProductPrice());
+        double total=0;
+        for (int i=0;i<cartList.getCart().size();i++){
+            total =total+(Double.parseDouble(cartList.getCart().get(i).getProductPrice()) * Double.parseDouble(cartList.getCart().get(i).getQuantity()));
         }
-        tvAmount.setText("Total Amount " +getString(R.string.rs)+" " +amount);
+        tvAmount.setText(getString(R.string.rs)+" " +total);
+        tvAmount.setText("Total Amount " +getString(R.string.rs)+" " +total);
         User user = SharedPreference.getInstance(getActivity()).getUser(C.USER);
         tvName.setText(user.getFirstName()+" "+user.getLastName());
         if(address.getAddressLine1()!=null) {
@@ -129,11 +130,11 @@ public class FragmentOrderConfirmationScreen extends Fragment implements Complet
         hashMap.put(C.USER_ID, SharedPreference.getInstance(getActivity()).getString(C.USER_ID));
         hashMap.put(C.ADDRESS_ID,address.getAddressId());
         hashMap.put(C.PAYMENT_TYPE,"COD");
-        long amount=0;
+        double total=0;
         List<ProductOrder> orders=new ArrayList<>();
         if(cartList!=null && cartList.getCart()!=null){
             for(int i=0;i<cartList.getCart().size();i++){
-                amount=amount+Long.parseLong(cartList.getCart().get(i).getProductPrice());
+                total =total+(Double.parseDouble(cartList.getCart().get(i).getProductPrice()) * Double.parseDouble(cartList.getCart().get(i).getQuantity()));
                 ProductOrder productOrder=new ProductOrder();
                 productOrder.setProductId(cartList.getCart().get(i).getProductId());
                 productOrder.setProductQuantity(cartList.getCart().get(i).getQuantity());
@@ -145,12 +146,12 @@ public class FragmentOrderConfirmationScreen extends Fragment implements Complet
         String json = gson.toJson(orders);
         hashMap.put(C.PRODUCT,json);
         hashMap.put(C.OFFER_CODE,"OFFER");
-        hashMap.put(C.TOTAL_AMOUNT,""+amount);
+        hashMap.put(C.TOTAL_AMOUNT,""+total);
 
         ProductOrderConfirmation productOrderConfirmation=new ProductOrderConfirmation();
         productOrderConfirmation.setAddressId(address.getAddressId());
         productOrderConfirmation.setOfferCode("OFFER");
-        productOrderConfirmation.setTotalAmount(""+amount);
+        productOrderConfirmation.setTotalAmount(""+total);
         productOrderConfirmation.setProduct(orders);
         productOrderConfirmation.setPaymentType("COD");
         productOrderConfirmation.setUserId(SharedPreference.getInstance(getActivity()).getString(C.USER_ID));
