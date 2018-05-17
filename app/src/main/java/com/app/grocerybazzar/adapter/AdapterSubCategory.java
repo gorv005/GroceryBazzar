@@ -74,6 +74,7 @@ public class AdapterSubCategory extends RecyclerView.Adapter<AdapterSubCategory.
     public void onBindViewHolder(DataObjectHolder holder, int position) {
         holder.tvSubCatname.setText(mDataset.get(position).getTitle());
         imageLoader.DisplayImage(mDataset.get(position).getSubcatIcon(),holder.imgSubCat);
+        imageLoader.DisplayImage(null,holder.imgSubCat,mDataset.get(position).getSubcatIcon1());
 
         holder.setOnItemClickListener(new ClickListener() {
             @Override

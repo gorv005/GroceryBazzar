@@ -13,8 +13,10 @@ import android.view.ViewGroup;
 import com.app.grocerybazzar.R;
 import com.app.grocerybazzar.adapter.AdapterSubCategory;
 import com.app.grocerybazzar.pojos.Category;
-import com.app.grocerybazzar.util.C;
+import com.app.grocerybazzar.pojos.Subcategory;
 import com.app.grocerybazzar.view.ActivityContainer;
+
+import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,7 +27,8 @@ public class FragmentSubCategory extends Fragment {
     private AdapterSubCategory adapterSubCategory;
     LinearLayoutManager mLayoutManager;
     Category category;
-
+    private static final Integer[] IMAGES_BRAND= {R.drawable.taj_100,R.drawable.taj_250,R.drawable.taj_leaf_tea_bags_25,
+            R.drawable.taj_tea_carton_100,R.drawable.taj_tea_carton_250};
     public FragmentSubCategory() {
     }
 
@@ -40,11 +43,23 @@ public class FragmentSubCategory extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         try {
-            category = (Category)getActivity().getIntent().getExtras().getSerializable(C.DATA);
+              String[] IMAGES_NAME= {getString(R.string.taj_100),getString(R.string.taj_250)
+                      ,getString(R.string.taj_leaf_tea_bags_25),
+                    getString(R.string.taj_tea_carton_100),getString(R.string.taj_tea_carton_250)};
+            //category = (Category)getActivity().getIntent().getExtras().getSerializable(C.DATA);
             recyclerView = (RecyclerView) view.findViewById(R.id.recycler_view);
             mLayoutManager = new LinearLayoutManager(getActivity());
             recyclerView.setLayoutManager(mLayoutManager);
-            adapterSubCategory = new AdapterSubCategory(category,category.getSubcategories(), getActivity());
+            ArrayList<Subcategory> subcategories=new ArrayList<>();
+            for (int i=0;i<IMAGES_BRAND.length;i++){
+                Subcategory subcategory=new Subcategory();
+                subcategory.setTitle(IMAGES_NAME[i]);
+                subcategory.setSubcatIcon1(IMAGES_BRAND[i]);
+                subcategories.add(subcategory);
+            }
+         //   adapterSubCategory = new AdapterSubCategory(category,category.getSubcategories(), getActivity());
+            adapterSubCategory = new AdapterSubCategory(category,subcategories, getActivity());
+
             recyclerView.setAdapter(adapterSubCategory);
 
         }

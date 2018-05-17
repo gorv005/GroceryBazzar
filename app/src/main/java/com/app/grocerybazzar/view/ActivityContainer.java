@@ -22,6 +22,7 @@ import com.app.grocerybazzar.view.fragments.FragmentCartList;
 import com.app.grocerybazzar.view.fragments.FragmentOrderConfirmationScreen;
 import com.app.grocerybazzar.view.fragments.FragmentProductInfo;
 import com.app.grocerybazzar.view.fragments.FragmentSubCategory;
+import com.app.grocerybazzar.view.fragments.FragmentSubProducts;
 import com.app.grocerybazzar.view.fragments.FragmentThankuScreen;
 import com.app.grocerybazzar.view.fragments.FragmentViewEditAddress;
 
@@ -117,6 +118,12 @@ public class ActivityContainer extends AppCompatActivity {
                 //   getSupportActionBar().hide();
                 fragment = new FragmentCartList();
                 fragmentTransaction.addToBackStack(null).replace(R.id.child_container, fragment);
+                // fragmentTransaction.addToBackStack(C.TAG_FRAGMENT_SPLASH);
+                break;
+            case C.FRAGMENT_SUB_PRODUCT:
+                //   getSupportActionBar().hide();
+                fragment = new FragmentSubProducts();
+                fragmentTransaction.replace(R.id.child_container, fragment);
                 // fragmentTransaction.addToBackStack(C.TAG_FRAGMENT_SPLASH);
                 break;
             case C.FRAGMENT_CART_LIST_FROM_HOME:

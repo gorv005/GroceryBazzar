@@ -64,6 +64,8 @@ public class C {
     public static final String OFFER_CODE ="offer_code" ;
     public static final String TOTAL_AMOUNT = "total_amount";
     public static final int FRAGMENT_THANKU_SCREEN = 14;
+    public static final int FRAGMENT_SUB_PRODUCT =15 ;
+
     public static String Login="login";
     public static String add_to_cart="addcart";
 

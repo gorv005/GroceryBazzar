@@ -54,5 +54,12 @@
     <string name="title_activity_my_accounts">My Accounts</string>
     <string name="register_email_id">Register Email ID</string>
     <string name="categories_handpicked_for_you">Categories handpicked for you</string>
+    <string name="suggested_item">Suggested Item</string>
+
     <string name="no_orders">Opps!! No orders</string>
+    <string name="taj_100">Taj Mahal Tea - 100 gm</string>
+    <string name="taj_250">Taj Mahal Tea - 250 gm</string>
+    <string name="taj_leaf_tea_bags_25">Taj Mahal Leaf Tea Bags 25 bags</string>
+    <string name="taj_tea_carton_100">Taj Mahal Tea Carton - 100 gm</string>
+    <string name="taj_tea_carton_250">Taj Mahal Tea Carton - 250 gm</string>
 </resources>

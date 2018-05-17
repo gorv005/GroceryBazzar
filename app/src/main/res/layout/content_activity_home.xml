@@ -69,5 +69,30 @@
             android:stretchMode="columnWidth" >
         </GridView>
     </RelativeLayout>
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:paddingStart="20dp"
+            android:textStyle="italic"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+            android:text="@string/suggested_item"
+            android:background="@color/light_pink"
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+        <GridView
+            android:id="@+id/gridViewSuggested"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp"
+            android:background="@color/white"
+            android:gravity="center"
+            android:numColumns="3"
 
+            android:stretchMode="columnWidth" >
+        </GridView>
+    </RelativeLayout>
 </LinearLayout>

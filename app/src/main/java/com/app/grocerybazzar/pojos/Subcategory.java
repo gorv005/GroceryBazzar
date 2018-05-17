@@ -19,7 +19,9 @@ public class Subcategory implements Serializable {
     @SerializedName("subcat_icon")
     @Expose
     private String subcatIcon;
-
+    @SerializedName("subcat_icon_1")
+    @Expose
+    private Integer subcatIcon1;
     /**
      * No args constructor for use in serialization
      *
@@ -62,5 +64,13 @@ public class Subcategory implements Serializable {
 
     public void setSubcatIcon(String subcatIcon) {
         this.subcatIcon = subcatIcon;
+    }
+
+    public Integer getSubcatIcon1() {
+        return subcatIcon1;
+    }
+
+    public void setSubcatIcon1(Integer subcatIcon1) {
+        this.subcatIcon1 = subcatIcon1;
     }
 }

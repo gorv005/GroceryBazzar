@@ -141,9 +141,11 @@ public class ActivityHomeWithCategory extends AppCompatActivity
                // intent.putExtra(C.DATA,categoryInfo.getCategories().get(position).getName());
 
                 Bundle bundle=new Bundle();
-                bundle.putSerializable(C.DATA,categoryInfo.getCategories().get(position));
-                bundle.putSerializable(C.CART_LIST,cartList);
-                bundle.putInt(C.SCREEN,C.FRAGMENT_CATEGORY_DETAILS);
+//                bundle.putSerializable(C.DATA,categoryInfo.getCategories().get(position));
+             //   bundle.putSerializable(C.CART_LIST,cartList);
+               // bundle.putInt(C.SCREEN,C.FRAGMENT_CATEGORY_DETAILS);
+                bundle.putInt(C.SCREEN,C.FRAGMENT_SUB_PRODUCT);
+
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
