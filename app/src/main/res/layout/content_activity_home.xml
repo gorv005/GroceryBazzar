@@ -7,7 +7,7 @@
     <!-- Top Sliding Banners -->
 
     <RelativeLayout
-        android:visibility="visible"
+        android:visibility="gone"
         android:layout_marginTop="55dp"
         android:layout_width="fill_parent"
         android:layout_height="150dp"
@@ -19,26 +19,31 @@
             android:layout_height="fill_parent"
             android:layout_alignParentTop="true" />
 
-        <com.viewpagerindicator.CirclePageIndicator
+
+        <android.support.design.widget.TabLayout
             android:id="@+id/indicator"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:gravity="bottom"
-            android:padding="10dip"
-            app:centered="true"
-            app:fillColor="#ff0099"
-            app:pageColor="#FF0000"
-            app:snap="false" />
+            android:layout_centerInParent="true"
+            app:tabBackground="@drawable/indicator_selector"
+            app:tabGravity="center"
+            app:tabIndicatorHeight="0dp" />
     </RelativeLayout>
-
+    <ImageView
+        android:background="@color/white"
+        android:id="@+id/img_add"
+        android:layout_marginTop="55dp"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_marginBottom="10dp" />
     <android.support.v7.widget.RecyclerView
         android:id="@+id/my_recycler_view"
         android:layout_width="match_parent"
         android:visibility="gone"
         android:layout_height="match_parent"
         android:scrollbars="none" />
+
 
 
     <RelativeLayout
@@ -69,30 +74,5 @@
             android:stretchMode="columnWidth" >
         </GridView>
     </RelativeLayout>
-    <RelativeLayout
-        android:background="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:paddingStart="20dp"
-            android:textStyle="italic"
-            android:gravity="center_vertical"
-            android:textColor="@color/black"
-            android:text="@string/suggested_item"
-            android:background="@color/light_pink"
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
-        <GridView
-            android:id="@+id/gridViewSuggested"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:horizontalSpacing="1dp"
-            android:verticalSpacing="1dp"
-            android:background="@color/white"
-            android:gravity="center"
-            android:numColumns="3"
 
-            android:stretchMode="columnWidth" >
-        </GridView>
-    </RelativeLayout>
 </LinearLayout>

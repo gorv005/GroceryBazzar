@@ -81,10 +81,11 @@ public class AdapterSubCategory extends RecyclerView.Adapter<AdapterSubCategory.
             public void onItemClick(int position, View v) {
 
                 Bundle bundle=new Bundle();
-                bundle.putSerializable(C.DATA,category);
+              //  bundle.putSerializable(C.DATA,category);
                 bundle.putSerializable(C.SUB_CAT_DETAIL,mDataset.get(position));
 
-                ((ActivityContainer)context).fragmnetLoader(C.FRAGMENT_SUB_CAT_DETAILS,bundle);
+            //    ((ActivityContainer)context).fragmnetLoader(C.FRAGMENT_SUB_CAT_DETAILS,bundle);
+                ((ActivityContainer)context).fragmnetLoader(C.FRAGMENT_DESCRIPTION,bundle);
 
 
             }

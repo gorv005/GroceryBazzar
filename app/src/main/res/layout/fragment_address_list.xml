@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
     android:paddingRight="10dp"
-    android:background="@drawable/back"
+    android:background="@color/white"
 
     tools:context="com.app.grocerybazzar.view.fragments.FragmentAddressList">
 

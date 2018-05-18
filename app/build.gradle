@@ -35,4 +35,5 @@ dependencies {
     compile 'com.android.support:recyclerview-v7:25.1.0'
     testCompile 'junit:junit:4.12'
     compile 'de.hdodenhof:circleimageview:2.2.0'
+    compile 'com.jsibbold:zoomage:1.1.0'
 }

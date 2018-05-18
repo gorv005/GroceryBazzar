@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -64,7 +65,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
     ArrayList<SectionDataModel> allSampleData;
     GridView gridView;
-    ImageView ibCart;
+    ImageView ibCart,ivAdd;
     CartList cartList;
     TextView tvCartQuantity,tvName,tvContact,tvEmail,tvprofile_image;
 
@@ -86,6 +87,8 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         listView=(ListView) findViewById(R.id.lvMenuItem);
         ibCart=(ImageView)findViewById(R.id.ibCart);
+        ivAdd=(ImageView)findViewById(R.id.img_add);
+        ivAdd.setImageResource(R.drawable.clinic_plus);
         tvCartQuantity=(TextView) findViewById(R.id.tvCartQuantity);
         tvName=(TextView) findViewById(R.id.tvName);
         tvContact=(TextView) findViewById(R.id.tvContact);
@@ -151,7 +154,7 @@ public class ActivityHomeWithCategory extends AppCompatActivity
             }
         });
 
-        init();
+      //  init();
     /*    allSampleData = new ArrayList<SectionDataModel>();
         createDummyData();
 
@@ -234,20 +237,20 @@ public class ActivityHomeWithCategory extends AppCompatActivity
         mPager.setAdapter(new ViewPagerAdapter(ActivityHomeWithCategory.this,ImagesArray));
 
 
-        CirclePageIndicator indicator = (CirclePageIndicator)
+        TabLayout indicator = (TabLayout)
                 findViewById(R.id.indicator);
 
-        indicator.setViewPager(mPager);
+        indicator.setupWithViewPager(mPager, true);
+
 
         final float density = getResources().getDisplayMetrics().density;
 
 //Set circle indicator radius
-        indicator.setRadius(5 * density);
 
         NUM_PAGES =IMAGES.length;
 
         // Auto start of viewpager
-        final Handler handler = new Handler();
+     /*   final Handler handler = new Handler();
         final Runnable Update = new Runnable() {
             public void run() {
                 if (currentPage == NUM_PAGES) {
@@ -262,36 +265,10 @@ public class ActivityHomeWithCategory extends AppCompatActivity
             public void run() {
                 handler.post(Update);
             }
-        }, 3000, 3000);
+        }, 3000, 3000);*/
 
-        mPager.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Log.e("DEBUG","currentPage="+currentPage);
 
-            }
-        });
         // Pager listener over indicator
-        indicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int position) {
-                currentPage = position;
-                Log.e("DEBUG","position="+position);
-
-            }
-
-            @Override
-            public void onPageScrolled(int pos, float arg1, int arg2) {
-
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int pos) {
-
-            }
-        });
-
     }
 
     @Override
